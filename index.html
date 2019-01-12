@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching Data</title>
+</head>
+<body>
+    <button onclick="getInfo()">User</button><hr>
+    <div>
+        <span id="b1"></span><br>
+        <span id="b2"></span><br>
+        <span id="b3"></span><br>
+        <span id="b4"></span><br>
+        <span id="b5"></span><br>
+        <span id="b6"></span><br>
+    </div>
+    <script>
+        function getInfo(){
+            var getInfo = new XMLHttpRequest();
+            getInfo.open('GET','student.json',true);
+            getInfo.onload = function(){
+                let data = JSON.parse(this.responseText);
+                document.getElementById("b1").innerHTML = "Name: " + data.name;
+                document.getElementById("b2").innerHTML = "Age: " + data.age;
+                document.getElementById("b3").innerHTML = "Weight: " + data.weight;
+                document.getElementById("b4").innerHTML = "Height: " + data.height;
+                document.getElementById("b5").innerHTML = "Friends: " + data.friends;
+                document.getElementById("b6").innerHTML = "College: " + data.college.Name + " ,"+"City:" + data.college["city"] + " , "+"PinCode:" + data.college.Pincode;
+            }
+          getInfo.send();
+        }
+ 
+    </script>
+</body>
+</html>

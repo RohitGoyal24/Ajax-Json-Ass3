@@ -1,0 +1,14 @@
+{
+    "name":"Rohit",
+    "age": 22,
+    "weight": 75,
+    "height": 6.7,
+    "friends": [
+        "Shashank", "Samyak", "Denil", "Pranjal"
+    ],
+    "college":{
+        "Name":"Sathyabama University",
+        "city":"Chennai, Tamil Nadu",
+        "Pincode": 600119
+    }
+}
